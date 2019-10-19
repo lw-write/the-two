@@ -15,7 +15,6 @@ $.ajax({
     type: 'get',
     url: '/categories',
     success: function(res) {
-        console.log(res)
         let html = template('categoryListTpl', { data: res })
         $('#categoryBox').html(html);
     }
@@ -27,6 +26,7 @@ $('#categoryBox').on('click', '.edit', function() {
         type: 'get',
         url: '/categories/' + id,
         success: function(res) {
+            console.log(res)
             let html = template('modifyCategoryTpl', res)
             $('#formBox').html(html);
         }
