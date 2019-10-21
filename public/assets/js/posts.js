@@ -52,3 +52,16 @@ $('#filterForm').on('submit', function() {
     })
     return false;
 })
+
+$('#postsBox').on('click', '.delete', function() {
+    if (confirm("你真的要甩了我吗?")) {
+        var id = $(this).attr('data-id');
+        $.ajax({
+            type: 'delete',
+            url: '/posts/' + id,
+            success: function() {
+                location.reload();
+            }
+        });
+    }
+})
