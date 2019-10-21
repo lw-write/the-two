@@ -2,7 +2,7 @@ $.ajax({
     type: 'get',
     url: '/categories',
     success: function(res) {
-        let html = template('categoryTpl', { data: res });
+        let html = template('categorypl', { data: res });
         $('#category').html(html);
     }
 })
