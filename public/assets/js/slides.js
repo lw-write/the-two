@@ -59,7 +59,7 @@ $(function() {
         url: '/slides',
         success: function(response) {
             sArr = response;
-            render();
+            render(sArr);
 
         }
     })
